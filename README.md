@@ -23,6 +23,12 @@ A pure, fullscreen 3D interactive flower built specifically for **Alishba**. Zer
 
 ---
 
+## 🌐 Live Website (GitHub Pages)
+
+👉 **[https://bsse23094.github.io/for-alishba/](https://bsse23094.github.io/for-alishba/)**
+
+---
+
 ## 🚀 How to Run Locally
 
 Preview right now in your browser:
