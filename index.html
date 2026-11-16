@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>For Alishba 🌸</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌸</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Fullscreen 3D Canvas -->
+  <div id="flower-canvas-container"></div>
+
+  <!-- Minimal Header Overlay -->
+  <header class="header-overlay">
+    <div class="header-left">
+      <h1 class="hero-title">For Alishba <span class="flower-emoji">🌸</span></h1>
+      <p class="hero-subtitle">They said real flowers die in the mail. So here’s one that never will.</p>
+    </div>
+
+    <div class="header-right">
+      <!-- Lo-Fi Cozy Vibes Toggle -->
+      <button class="glass-btn" id="toggle-lofi-btn" title="Toggle cozy lo-fi chords">
+        <span class="btn-icon">🎵</span>
+        <span class="btn-text">Lo-Fi</span>
+      </button>
+
+      <!-- Sound FX Toggle -->
+      <button class="glass-btn icon-only" id="toggle-sound-btn" title="Toggle sound effects">
+        🔊
+      </button>
+    </div>
+  </header>
+
+  <!-- Interactive Center/Canvas Hint -->
+  <div class="interaction-hint">
+    ✨ Drag to rotate 360° • Scroll to zoom • Tap petals
+  </div>
+
+  <!-- Bottom Floating Glass Control Dock -->
+  <div class="floating-dock">
+    <!-- Bloom Slider -->
+    <div class="dock-group bloom-group">
+      <span class="dock-label">Bloom:</span>
+      <div class="slider-wrapper">
+        <span class="slider-hint">Bud</span>
+        <input type="range" id="bloom-slider" min="0" max="1" step="0.01" value="1">
+        <span class="slider-hint active">Bloom</span>
+      </div>
+      <button class="dock-btn-compact" id="quick-bloom-btn">
+        🌱 Close Bud
+      </button>
+    </div>
+
+    <div class="dock-divider"></div>
+
+    <!-- Palette Chips -->
+    <div class="dock-group palette-group">
+      <span class="dock-label">Aesthetic:</span>
+      <div class="palette-picker">
+        <button class="palette-chip active" data-palette="blush" title="Blush Peony">
+          <span class="dot" style="background: #ff6b8b;"></span>
+          <span>Blush</span>
+        </button>
+        <button class="palette-chip" data-palette="lavender" title="Lavender Dream">
+          <span class="dot" style="background: #b5838d;"></span>
+          <span>Lavender</span>
+        </button>
+        <button class="palette-chip" data-palette="sunset" title="Golden Sunset">
+          <span class="dot" style="background: #f77f00;"></span>
+          <span>Sunset</span>
+        </button>
+        <button class="palette-chip" data-palette="midnight" title="Midnight Mirage">
+          <span class="dot" style="background: #00b4d8;"></span>
+          <span>Midnight</span>
+        </button>
+        <button class="palette-chip" data-palette="pearl" title="Pure Silk">
+          <span class="dot" style="background: #fbf8f3;"></span>
+          <span>Silk</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="dock-divider"></div>
+
+    <!-- Actions: Water & Pluck -->
+    <div class="dock-group action-group">
+      <button class="dock-action-btn water-btn" id="water-flower-btn" title="Water the flower with glowing droplets">
+        💧 Water
+      </button>
+      <button class="dock-action-btn pluck-btn" id="pluck-petal-btn" title="Pluck a petal to reveal a little thought">
+        🌸 Pluck Petal
+      </button>
+    </div>
+  </div>
+
+  <!-- Script Libraries (Local first) -->
+  <script src="libs/three.min.js"></script>
+  <script src="libs/OrbitControls.js"></script>
+  <script src="libs/gsap.min.js"></script>
+  <script src="libs/confetti.browser.min.js"></script>
+
+  <!-- Application Scripts -->
+  <script src="flower.js"></script>
+  <script src="audio.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
